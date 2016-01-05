@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    //header(style="background-color:red")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js") 	
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
+  body(style="background:linear-gradient(90deg,blue,white)")
+    block content
+      center
+        h1= title
+          div(style="border:5px;border-color:#000;border-radius: 10px;" align="center")
+            div 
+              a(class="fa fa-google btn btn-default" style="margin-top:70px; width:200px; background-color: #dd4b39; color:#fff; padding-left:20px" href="/auth/google") &nbsp Login with google
+            div
+              a(class="fa fa-facebook btn btn-primary" style="margin-top:30px; width:200px;" href="/auth/facebook") &nbsp Login with facebook
+            div  
+              a(class="btn btn-success" style="margin-top:30px; width:200px;color:#fff; padding-left:20px" href="/filter") &nbsp Filter
+            div  
+              a(class="btn btn-warning" style="margin-top:30px; width:200px;color:#fff; padding-left:20px" href="/local") &nbsp Local storage
+            div  
+              a(class="btn btn-danger" style="margin-top:30px; width:200px; color:#fff; padding-left:20px" href="/cookies") &nbsp Cookies
+            div
+              a(class="btn btn-info" style="margin-top:30px; width:200px;color:#fff; padding-left:20px" href="/namedir") &nbsp Model directive
+            div
+              a(class="btn btn-warning" style="margin-top:30px; width:200px;color:#fff; padding-left:20px" href="/modeldir") &nbsp Repeat directive    
+      

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+<head>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script type="text/javascript">
+  var MainApp = angular.module('MainApp', []);
+
+MainApp.controller('PhoneListCtrl', function ($scope) {
+  $scope.phones = [
+    {'name': 'Nexus S',
+     'snippet': 'Fast just got faster with Nexus S.'},
+    {'name': 'Motorola with Wi-Fi',
+     'snippet': 'The Next, Next Generation tablet.'},
+    {'name': 'MOTOROLA',
+     'snippet': 'The Next, Next Generation tablet.'}
+  ];
+});
+
+MainApp.controller('FilterController', ['filterFilter', function(filterFilter) {
+	  this.array = [
+	    {name: 'Tamilnadu'},
+	    {name: 'Andhra'},
+	    {name: 'Karnataka'},
+	    {name: 'Telungana'},
+	    {name: 'Delhi'},
+	    {name: 'Mumbai'}
+	  ];
+	  this.filteredArray = filterFilter(this.array, 'i');
+	}]);
+  
+  
+  </script>
+</head>
+<body style="background:linear-gradient(90deg,green,white)" >
+<div align="center">
+<h3 style="font-size:40px;">Filter Example</h3>
+<div ng-controller="FilterController as ctrl">
+  <div style="color:#fff">
+    State Name:
+    <span ng-repeat="entry in ctrl.array">{{entry.name}} </span>
+  </div>
+  <div style="color:#fff">
+    State Name that contains "i":
+    <div>
+    <ul style="color:#fff;list-style-type: none; " ng-repeat="entry in ctrl.filteredArray">
+    <li>{{entry.name}}</li>
+    </ul>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+

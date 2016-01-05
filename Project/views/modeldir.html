@@ -1,0 +1,32 @@
+<html ng-app="RepeatApp">
+<head>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+  <script>
+  var RepeatApp = angular.module('RepeatApp', []);
+
+  RepeatApp.controller('RepeatAppCtrl', function ($scope) {
+    $scope.first = [
+      {'name': 'India',
+       'description': 'Incredible India'},
+      {'name': 'America',
+       'description': 'United states'},
+      {'name': 'Lodon',
+       'description': 'United kingdom'}
+    ];
+  });
+  
+  </script>
+</head>
+<body ng-controller="RepeatAppCtrl" style="background:linear-gradient(90deg,orange,white)">
+<div align="center">
+<h3 style="font-size:40px;">ng-Repeat Example</h3>
+  <ul style="list-style-type: none; ">
+    <li ng-repeat="fir in first">
+      <span>{{fir.name}}</span>
+      <p>{{fir.description}}</p>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
